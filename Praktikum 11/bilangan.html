@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penjumlahan</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let bil1 = document.getElementById("bil1");
+        let bil2 = document.getElementById("bil2");
+        let hasil = document.getElementById("hasil");
+
+        function hitung() {
+          let jumlah = parseInt(bil1.value) + parseInt(bil2.value);
+          hasil.innerHTML = "Hasil: " + jumlah;
+        }
+
+        bil1.addEventListener("input", hitung);
+        bil2.addEventListener("input", hitung);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Menghitung Jumlah Dua Bilangan</h1>
+    <label for="bil1">Masukan Bilangan: </label>
+    <input type="number" id="bil1" placeholder="Bilangan 1" />
+    <br />
+    <br />
+    <label for="bil2">Masukan Bilangan: </label>
+    <input type="number" id="bil2" placeholder="Bilangan 2" />
+    <p id="hasil">Hasil:</p>
+  </body>
+</html>
